@@ -1,10 +1,15 @@
 import React from "react";
 import TaskItem from "../components/TaskItem";
+import "../styles/Tasks.css";
 
-const Tasks = () => {
+const Tasks = ({ tasks, setTasks }) => {
   return (
-    <div>
-      <TaskItem />
+    <div className="tasks">
+      {tasks.map((task) => (
+        <div key={task.id}>
+          <TaskItem task={task} />
+        </div>
+      ))}
     </div>
   );
 };

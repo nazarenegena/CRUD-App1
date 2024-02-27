@@ -1,2 +1,40 @@
 .content {
+     /* display: grid;
+     grid-template-columns: 1fr 1fr; */
+     margin: 5rem 10rem 0 10rem;
+
+}
+
+.modal{
+     position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add-tasks-btn {
+     width: 20%;
+     height: 3rem;
+     cursor: pointer;
+      background: rgb(29, 29, 29);
+      color: whitesmoke;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+      border: 1px solid rgb(29, 29, 29);
+
+     
+}
+
+.add-tasks-btn:hover {
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+   background-color: white;
+   color: black;
+   border: 1px solid rgb(43, 43, 43);
 }

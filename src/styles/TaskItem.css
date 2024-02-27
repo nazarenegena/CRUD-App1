@@ -1,0 +1,26 @@
+
+.task-items {
+     table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+   border-collapse: collapse;
+}
+
+.task-items tbody, .task-items td {
+    color: black;
+height: 4rem;
+        padding: 12px 15px;
+
+}
+
+.action-btn {
+       cursor: pointer;
+        background-color: rgb(37, 37, 37);
+     color: white;
+      border-radius: 10px;
+         font-weight: 600;
+                   padding: 5px 30px 5px 30px;
+       
+
+}
