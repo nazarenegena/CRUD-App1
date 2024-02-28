@@ -7,7 +7,7 @@ const Tasks = ({ tasks, setTasks }) => {
     <div className="tasks">
       {tasks.map((task) => (
         <div key={task.id}>
-          <TaskItem task={task} />
+          <TaskItem task={task} tasks={tasks} setTasks={setTasks} />
         </div>
       ))}
     </div>

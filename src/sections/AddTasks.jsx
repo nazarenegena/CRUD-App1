@@ -1,10 +1,17 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../styles/AddTasks.css";
 
-const AddTasks = ({ tasks, setTasks, setIsOpen }) => {
+const AddTasks = ({ tasks, setTasks, setIsOpen, editing, task }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+
+  useEffect(() => {
+    if (editing) {
+      setTitle(task.title);
+      setDescription(task.description);
+    }
+  }, [editing, task]);
 
   const handleSubmitTask = (event) => {
     event.preventDefault();
@@ -15,13 +22,26 @@ const AddTasks = ({ tasks, setTasks, setIsOpen }) => {
       description: description,
     };
     setTasks([...tasks, taskItem]);
-    console.log(tasks, "the tasks");
     setTitle("");
     setDescription("");
   };
+
+  const handleEditTask = (event) => {
+    event.preventDefault();
+
+    const updatedTasks = tasks.map((item) => {
+      if (item.id === task.id) {
+        item.title = title;
+        item.description = description;
+      }
+
+      return item;
+    });
+    setTasks([...updatedTasks]);
+  };
   return (
     <>
-      <form className="add-tasks-form">
+      <div className="add-tasks-form">
         <div className="title">
           <label>Title</label>
           <input
@@ -64,10 +84,16 @@ const AddTasks = ({ tasks, setTasks, setIsOpen }) => {
             <input type="time" name="stop" value="" />
           </div>
         </div>
-        <button onClick={handleSubmitTask} className="add-task">
-          Add{" "}
-        </button>
-      </form>
+        {editing ? (
+          <button onClick={handleEditTask} className="edit-task">
+            Edit{" "}
+          </button>
+        ) : (
+          <button onClick={handleSubmitTask} className="add-task">
+            Add{" "}
+          </button>
+        )}
+      </div>
       <button className="cancel-modal" onClick={() => setIsOpen(false)}>
         X
       </button>
