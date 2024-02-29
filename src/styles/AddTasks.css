@@ -17,18 +17,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #5f5d5d;
+            font-weight: 800;
+            font-size: 1.2rem;
 }
 
 .title input {
     width: 50%;
     height: 40px;
-            outline: none;
+            outline:none;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px #c0bfbf solid;
+            box-shadow: 3px 4px #c0bfbf;
+            color: #4d4b4b;
+            font-weight: 600;
 
 }
 .description {
     display: flex;
     flex-direction: column;
         align-items: center;
+         color: #5f5d5d;
+            font-weight: 600;
 
 }
 .description textarea {
@@ -36,7 +47,12 @@
         height: 60px;
         outline: none;
         padding: 10px;
-
+            border-radius: 10px;
+            text-align: center;
+            border: 1px #c0bfbf solid;
+            box-shadow: 3px 4px #c0bfbf;
+            color: #4d4b4b;
+            font-weight: 600;
 
 }
 
@@ -44,6 +60,7 @@
 display: flex;
 justify-content: center;
 margin-top: 20px;
+
 }
 
 
@@ -59,60 +76,94 @@ margin-top: 20px;
 .start-date {
     display: flex;
     flex-direction: column;
+     color: #5f5d5d;
+            font-weight: 600;
 
 }
 
 .start-date input {
     margin-right: 10px;
             padding: 5px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px #c0bfbf solid;
+            box-shadow: 3px 4px #c0bfbf;
+            color: #4d4b4b;
+            font-weight: 600;
 
 }
 
 .end-date {
     display: flex;
     flex-direction: column;
+     color: #5f5d5d;
+            font-weight: 600;
+            font-size: 1.2rem;
 }
 .end-date input {
             padding: 5px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px #c0bfbf solid;
+            box-shadow: 3px 4px #c0bfbf;
+            color: #4d4b4b;
+            font-weight: 600;
 
 }
 .start-time {
     display: flex;
     flex-direction: column;
      margin-left: 10px;
+      color: #5f5d5d;
+            font-weight: 600;
 }
 
 .start-time input {
         margin-right: 10px;
         padding: 5px;
         cursor: pointer;
+        border-radius: 10px;
+            text-align: center;
+            border: 1px #c0bfbf solid;
+            box-shadow: 3px 4px #c0bfbf;
+            color: #4d4b4b;
+            font-weight: 600;
 
 }
 
 .end-time {
     display: flex;
     flex-direction: column;
+     color: #5f5d5d;
+            font-weight: 600;
 }
 
 .end-time input{
         padding: 5px;
+        border-radius: 10px;
+            text-align: center;
+            border: 1px #c0bfbf solid;
+            box-shadow: 3px 4px #c0bfbf;
+            color: #4d4b4b;
+            font-weight: 600;
 
 }
 
 label {
+    
     margin-top: 15px;
     margin-bottom: 10px;
 }
 
 .add-task {
      margin: 3rem 5rem 0 5rem;
-     background-color: rgb(24, 24, 24);
+     background-color: rgb(31, 30, 30);
      color: white;
       border-radius: 10px;
          font-weight: 600;
           cursor: pointer;
                    padding: 10px 30px 10px 30px;
-border: 1px solid rgb(24, 24, 24);
+border: 1px solid rgb(56, 56, 56);
      height: 3rem;
 
 }
@@ -123,9 +174,21 @@ border: 1px solid rgb(24, 24, 24);
    border: 1px solid rgb(126, 123, 123);
 }
 
-.actions button {
-                    background-color: rgba(223, 17, 17, 0.877);
-                    color: whitesmoke;
-
+.edit-task {
+     margin: 3rem 5rem 0 5rem;
+     background-color: rgb(31, 30, 30);
+     color: white;
+      border-radius: 10px;
+         font-weight: 600;
+          cursor: pointer;
+                   padding: 10px 30px 10px 30px;
+border: 1px solid rgb(56, 56, 56);
+     height: 3rem;
 }
 
+.edit-task:hover {
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+   background-color: #c0bfbf;
+   color: black;
+   border: 1px solid #c0bfbf;
+}

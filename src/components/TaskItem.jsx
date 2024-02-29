@@ -19,15 +19,20 @@ const TaskItem = ({ task, tasks, setTasks }) => {
     <>
       <table className="task-items">
         <tbody>
-          <td> {task.title}</td>
-          <td> {task.description}</td>
-          <td>10:30am - 2:30pm</td>
+          <td className="td-title"> {task.title}</td>
+          <td className="td-description"> {task.description}</td>
+          <td className="td-dates">
+            {task.startDate} - {task.endDate}
+          </td>
+          <td className="td-time">
+            {task.startTime} - {task.stopTime}
+          </td>
           <td>
             {" "}
-            <button className="action-btn" onClick={handleEdit}>
+            <button className="edit-btn" onClick={handleEdit}>
               Edit
             </button>
-            <button className="action-btn" onClick={handleDelete}>
+            <button className="delete-btn" onClick={handleDelete}>
               Delete
             </button>
           </td>
